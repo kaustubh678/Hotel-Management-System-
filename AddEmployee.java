@@ -9,13 +9,13 @@ import java.awt.event.*;
 import java.sql.*;
 import javax.swing.*;
 
-public class AddGuest extends JFrame{ //Third Frame
+public class AddEmployee extends JFrame{ //Third Frame
 
     
 	JTextField textField,textField_1,textField_2,textField_3,textField_4,textField_5,textField_6;
         JComboBox c1;
 
-        public AddGuest(){
+        public AddEmployee(){
             getContentPane().setForeground(Color.BLUE);
             getContentPane().setBackground(Color.WHITE);
             setTitle("ADD Guest DETAILS");
@@ -114,7 +114,7 @@ public class AddGuest extends JFrame{ //Third Frame
 	
             setVisible(true);
 	
-            JLabel AddPassengers = new JLabel("ADD Guest DETAILS");
+            JLabel AddPassengers = new JLabel("ADD Employee DETAILS");
             AddPassengers.setForeground(Color.BLUE);
             AddPassengers.setFont(new Font("Tahoma", Font.PLAIN, 31));
             AddPassengers.setBounds(450, 24, 442, 35);
@@ -152,7 +152,7 @@ public class AddGuest extends JFrame{ //Third Frame
                     
                     try {
                         conn c = new conn();
-                        String str = "INSERT INTO Guest values( '"+name+"', '"+age+"', '"+gender+"','"+s6+"', '"+salary+"', '"+phone+"','"+aadhar+"', '"+email+"')";
+                        String str = "INSERT INTO Employee values( '"+name+"', '"+age+"', '"+gender+"','"+s6+"', '"+salary+"', '"+phone+"','"+aadhar+"', '"+email+"')";
                         
                         c.s.executeUpdate(str);
                         JOptionPane.showMessageDialog(null,"Employee Added");
@@ -171,6 +171,6 @@ public class AddGuest extends JFrame{ //Third Frame
 	}
         
     public static void main(String[] args){
-        new AddGuest();
+        new AddEmployee();
     }   
 }
